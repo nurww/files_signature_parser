@@ -1,0 +1,40 @@
+To run this parser you must open command line interface in current directory.
+Then run the following command -java -jar files_signature_parser.jar [options] where options are described below.
+NOTE: parser works only with files with following signature: {code}_{subject}_{date}. {date} must be {dd} {MM} {yy} or {dd} {MM} {yyyy}
+NOTE: please, do not point inspected directory as an output directory!
+<WARNING>: options are case sensitive!!!
+
+Usage: -java -jar files_signature_parser.jar [options]
+  Options:
+    -f, -F
+      {-r / -R} - this command sets write in file mode
+            Default: false
+    -h, -H, -help
+      {-h / -H / -help} - this command shows you available options
+            Default: false
+    -r, -R
+      {-r / -R} - this command sets recursive mode
+            Default: false
+    -i, -I
+      {-i / -I + path} - this command sets directory to inspect
+            Default: _
+    -o, -O
+      {-o / -O + path} - this command sets file to write inside
+            Default: FileWithResults.txt
+    -cf, -CF, -cF, -Cf
+      {-cf -customFormat + column(s)} - this command sets columns to display
+            %dir - display Directory column%fileName - display File Name column
+            %fullPath - display Absolute Path column
+            %relPath - display Relative Path column
+            %code - display Code column
+            %subject - display Subject column
+            %date - display Date column
+            Default: [%dir, %fileName, %code, %subject, %date]
+    -dateFormat, -df
+      {-dateFormat / -df} - this command sets date formatYou can you the
+            following date formats: ddMMyyyy, yyyyMMdd, dd.MM.yyyy, dd/MM/yyyy, dd-MM-yyyy
+            Default: ddMMyyyy
+
+C:\Users\toktarkhan_n\Desktop\FileWithResults.txt file does not exist!
+
+Process finished with exit code 0
